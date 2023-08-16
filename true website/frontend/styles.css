@@ -26,3 +26,8 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
+
+nav .logo {
+    width: 100px;
+    cursor: pointer;
+}
