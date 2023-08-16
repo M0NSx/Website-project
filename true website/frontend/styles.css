@@ -15,3 +15,7 @@
     align-items: center;
     justify-content: center;
 }
+
+nav {
+    width: 100%;
+    position: absolute;
