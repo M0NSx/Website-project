@@ -31,3 +31,9 @@ nav .logo {
     width: 100px;
     cursor: pointer;
 }
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin-left: 40px;
+}
