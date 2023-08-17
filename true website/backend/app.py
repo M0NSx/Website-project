@@ -27,7 +27,8 @@ def create_acc():
             cursor.execute('INSERT INTO users (nickname, password) VALUES (?, ?)', (nickname, password))
             db.commit()
             return "Account created successfully!"
-
+        else:
+            return "Passwords do not match. Account creation failed."
 
 if __name__ == "__main__":
     app.run(debug=True)
