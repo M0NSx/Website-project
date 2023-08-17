@@ -16,6 +16,7 @@ def index():
 
 @app.route('/create_acc', methods=["POST", "GET"])
 def create_acc():
+    if request.method == "POST":
 
 
 if __name__ == "__main__":
