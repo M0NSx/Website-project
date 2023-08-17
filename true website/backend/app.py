@@ -15,6 +15,7 @@ def index():
     return render_template("index.html")
 
 @app.route('/create_acc', methods=["POST", "GET"])
+def create_acc():
 
 
 if __name__ == "__main__":
