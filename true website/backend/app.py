@@ -10,6 +10,7 @@ def get_db():
         db = g._database = sqlite3.connect(DATABASE)
     return db
 
+@app.route("/")
 
 if __name__ == "__main__":
     app.run(debug=True)
