@@ -22,6 +22,7 @@ def create_acc():
         confirm_password = request.form['confirm_password']
 
         if password == confirm_password:
+            db = get_db()
 
 
 if __name__ == "__main__":
