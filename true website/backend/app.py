@@ -12,3 +12,7 @@ def register():
 
 @app.route("/create_acc")
 def create_acc():
+    return render_template("create_acc.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
