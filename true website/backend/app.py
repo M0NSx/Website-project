@@ -1,7 +1,6 @@
-from flask import Flask, render_template, redirect, request, flash, url_or
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static")
 
 @app.route("/")
-@app.route("/index")
 def index():
