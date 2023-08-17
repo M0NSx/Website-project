@@ -14,6 +14,7 @@ def get_db():
 def index():
     return render_template("index.html")
 
+@app.route('/create_acc', methods=["POST", "GET"])
 
 
 if __name__ == "__main__":
