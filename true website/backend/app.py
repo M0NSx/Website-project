@@ -18,6 +18,7 @@ def index():
 def create_acc():
     if request.method == "POST":
         nickname = request.form['nickname']
+        password = request.form['password']
 
 
 if __name__ == "__main__":
