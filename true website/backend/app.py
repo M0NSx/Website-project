@@ -25,6 +25,7 @@ def create_acc():
             db = get_db()
             cursor = db.cursor()
             cursor.execute('INSERT INTO users (nickname, password) VALUES (?, ?)', (nickname, password))
+            db.commit()
 
 
 if __name__ == "__main__":
