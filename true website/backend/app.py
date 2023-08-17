@@ -21,6 +21,8 @@ def create_acc():
         password = request.form['password']
         confirm_password = request.form['confirm_password']
 
+        if password == confirm_password:
+
 
 if __name__ == "__main__":
     app.run(debug=True)
