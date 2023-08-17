@@ -30,5 +30,9 @@ def create_acc():
         else:
             return "Passwords do not match. Account creation failed."
 
+    return render_template("create_acc.html")
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
