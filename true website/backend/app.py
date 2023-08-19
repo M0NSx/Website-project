@@ -35,6 +35,7 @@ def create_acc():
 @app.route('/register', methods=["POST", "GET"])
 def register():
     if request.method == "POST":
+        nickname = request.form['nickname']
 
 
 if __name__ == "__main__":
