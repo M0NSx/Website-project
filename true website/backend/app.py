@@ -33,6 +33,7 @@ def create_acc():
     return render_template("create_acc.html")
 
 @app.route('/register', methods=["POST", "GET"])
+def register():
 
 
 if __name__ == "__main__":
