@@ -51,6 +51,7 @@ def register():
     return render_template('login.html')
 
 @app.teardown_appcontext
+def close_db_connection(exception):
 
 
 if __name__ == "__main__":
