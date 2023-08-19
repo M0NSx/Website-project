@@ -39,6 +39,7 @@ def register():
         password = request.form['password']
 
         db = get_db()
+        cursor = db.cursor()
 
 
 if __name__ == "__main__":
