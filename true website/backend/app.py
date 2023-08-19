@@ -43,6 +43,8 @@ def register():
         cursor.execute('SELECT * FROM users WHERE nickname = ? AND password = ?', (nickname, password))
         user = cursor.fetchone()
 
+        if user:
+
 
 if __name__ == "__main__":
     app.run(debug=True)
