@@ -5,3 +5,4 @@ app = Flask(__name__)
 app.secret_key = '414Çbbadhgjgruuq23213Ç'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+db = SQLAlchemy(app)
