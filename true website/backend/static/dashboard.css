@@ -16,3 +16,11 @@ html, body {
     padding: 0 15px;
     z-index: 9997;
 }
+
+#header .main-bar img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 8px solid #2c2f3f;
+    border-radius: 50%;
+}
