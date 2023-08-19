@@ -46,6 +46,7 @@ def register():
         if user:
             return "Login successful!"
         else:
+            return "Login failed. Invalid credentials."
 
 
 if __name__ == "__main__":
