@@ -48,3 +48,49 @@ html, body {
 #header .main-bar .configurations a:hover {
     background: #149ddd;
 }
+
+.navmenu {
+    padding: 1.5rem;
+}
+
+.navmenu a,
+.navmenu a:focus {
+    display: flex;
+    align-items: center;
+    color: #a8a9b4;
+    transition: 0.2s;
+    font-size: 15px;
+}
+
+.navmenu a i,
+.navmenu a:focus i {
+    font-size: 24px;
+    padding-right: 0.8rem;
+    color: #6f7180;
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus,
+.navmenu li:hover > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navmenu a:hover i,
+.navmenu .active i,
+.navmenu .active:focus i,
+.navmenu li:hover > a i {
+    color: #149ddd;
+}
+
+.navmenu #logout,
+.navmenu li:hover > #logout {
+    color: #d86161;
+    text-decoration: none;
+}
+
+.navmenu #logout i:hover,
+.navmenu li:hover > #logout i {
+    color: #d86161;
+}
