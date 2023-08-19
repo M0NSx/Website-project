@@ -45,6 +45,7 @@ def register():
 
         if user:
             return "Login successful!"
+        else:
 
 
 if __name__ == "__main__":
