@@ -38,6 +38,8 @@ def register():
         nickname = request.form['nickname']
         password = request.form['password']
 
+        db = get_db()
+
 
 if __name__ == "__main__":
     app.run(debug=True)
