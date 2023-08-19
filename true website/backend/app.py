@@ -27,3 +27,13 @@ def create_acc():
         nickname = request.form['nickname']
         password = request.form['password']
         confirm_password = request.form['confirm_password']
+
+        if password == confirm_password:
+            new_user = User(nickname=nickname, password=password)
+            db.session.add(new_user)
+            db.session.commit()
+            return redirect(url_for("register"))
+        else:
+            return "Passwords do not match. Account creation failed."
+
+    return render_template("create_acc.html")
