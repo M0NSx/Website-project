@@ -44,6 +44,7 @@ def register():
         user = cursor.fetchone()
 
         if user:
+            return "Login successful!"
 
 
 if __name__ == "__main__":
