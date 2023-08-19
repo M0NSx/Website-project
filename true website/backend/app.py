@@ -37,3 +37,23 @@ def create_acc():
             return "Passwords do not match. Account creation failed."
 
     return render_template("create_acc.html")
+
+@app.route('/register', methods=["POST", "GET"])
+def register():
+
+    if request.method == "POST":
+        nickname = request.form['nickname']
+        password = request.form['password']
+
+        user = User.query.filter_by(nickname=nickname, password=password).first()
+
+        if user:
+            session['user_nickname'] = user.nickname
+            return redirect(url_for("dashboard"))
+        else:
+            return "Login failed. Invalid credentials."
+
+    return render_template('login.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
