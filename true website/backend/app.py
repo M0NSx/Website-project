@@ -16,6 +16,9 @@ class User(db.Model):
 def index():
     return render_template("index.html")
 
+@app.route("/create_combo")
+
+
 @app.route("/dashboard")
 def dashboard():
     user_nickname = session.get('user_nickname')
