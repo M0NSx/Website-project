@@ -17,6 +17,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/create_combo")
+def create_combo():
 
 
 @app.route("/dashboard")
