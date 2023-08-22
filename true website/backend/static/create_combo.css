@@ -31,3 +31,5 @@
     padding: 2px;
     width: 200px;
     display: flex;
+    flex-direction: column;
+}
