@@ -58,3 +58,6 @@ selectElements.forEach((selectElement, index) => {
             else if (selectedValue === "Diamond") {
                 imageElement.src = "../static/img/DiamondNew.png"; 
             }
+            else if (selectedValue === "Flame") {
+                imageElement.src = "../static/img/FlameNew.png"; 
+            }
