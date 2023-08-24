@@ -50,3 +50,5 @@ selectElements.forEach((selectElement, index) => {
                 imageElement.src = "../static/img/RumbleNew.png"; 
             }
             else if (selectedValue === "Buddha") {
+                imageElement.src = "../static/img/BuddhaNew.png"; 
+            }
