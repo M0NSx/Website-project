@@ -40,3 +40,4 @@ selectElements.forEach((selectElement, index) => {
             else if (selectedValue === "Control") {
                 imageElement.src = "../static/img/ControlNew.png"; 
             }
+            else if (selectedValue === "Gravity") {
