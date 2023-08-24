@@ -17,3 +17,6 @@ document.addEventListener('click', (e) => {
         toggleActiveClass(targetEl);
     }
 });
+
+/* */
+const selectElements = document.querySelectorAll(".filter");
