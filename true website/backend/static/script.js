@@ -29,3 +29,5 @@ selectElements.forEach((selectElement, index) => {
 
             // Blox Fruits
             if (selectedValue === "Dark Blade") {
+                imageElement.src = "../static/img/Dark_Blade.png"; 
+            }
