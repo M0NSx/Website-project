@@ -38,3 +38,5 @@ selectElements.forEach((selectElement, index) => {
                 imageElement.src = "../static/img/DoughNew.png"; 
             }
             else if (selectedValue === "Control") {
+                imageElement.src = "../static/img/ControlNew.png"; 
+            }
