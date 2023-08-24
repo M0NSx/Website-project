@@ -47,3 +47,5 @@ selectElements.forEach((selectElement, index) => {
                 imageElement.src = "../static/img/BlizzardIcon.png"; 
             }
             else if (selectedValue === "Rumble") {
+                imageElement.src = "../static/img/RumbleNew.png"; 
+            }
