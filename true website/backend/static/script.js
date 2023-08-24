@@ -44,3 +44,5 @@ selectElements.forEach((selectElement, index) => {
                 imageElement.src = "../static/img/GravityNew.png"; 
             }
             else if (selectedValue === "Blizzard") {
+                imageElement.src = "../static/img/BlizzardIcon.png"; 
+            }
