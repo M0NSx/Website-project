@@ -50,6 +50,9 @@ def create_combo():
         db.session.add(new_combo)
         db.session.commit()
 
+        flash("Combo created successfully!", "success")
+
+
 @app.route('/create_acc', methods=["POST", "GET"])
 def create_acc():
     if request.method == "POST":
