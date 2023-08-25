@@ -17,3 +17,7 @@ body {
     margin-top: 27px;
     margin-bottom: 20px;
 }
+
+.combo p {
+    display: inline;
+}
