@@ -100,5 +100,8 @@ def register():
 
     return render_template('login.html')
 
+@app.route('/delete_combo/<int:id>', methods=["POST"])
+
+
 if __name__ == '__main__':
     app.run(debug=True)
