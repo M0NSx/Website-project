@@ -38,6 +38,7 @@ def dashboard():
 
 @app.route('/create_combo', methods=["POST", "GET"])
 def create_combo():
+    if request.method == "POST":
 
 
 @app.route('/create_acc', methods=["POST", "GET"])
