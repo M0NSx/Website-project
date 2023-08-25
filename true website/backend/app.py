@@ -40,6 +40,7 @@ def dashboard():
 def create_combo():
     if request.method == "POST":
         user = User.query.filter_by(nickname=session['user_nickname']).first()
+        fruit = request.form['fruit']
 
 
 @app.route('/create_acc', methods=["POST", "GET"])
