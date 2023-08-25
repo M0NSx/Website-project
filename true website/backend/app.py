@@ -39,6 +39,7 @@ def dashboard():
 @app.route('/create_combo', methods=["POST", "GET"])
 def create_combo():
     if request.method == "POST":
+        user = User.query.filter_by(nickname=session['user_nickname']).first()
 
 
 @app.route('/create_acc', methods=["POST", "GET"])
