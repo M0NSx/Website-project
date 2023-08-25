@@ -53,6 +53,7 @@ def create_combo():
         flash("Combo created successfully!", "success")
 
         user_nickname = session.get('user_nickname')
+        return render_template("create_combo.html", user_nickname=user_nickname)
 
 
 
