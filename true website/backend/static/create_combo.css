@@ -98,3 +98,8 @@
     left: 61%;
     width: 500px;
 }
+
+.close-success {
+    margin-left: 15rem;
+    color: red;
+}
