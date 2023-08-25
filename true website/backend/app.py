@@ -13,6 +13,7 @@ class User(db.Model):
     password = db.Column(db.String(100), nullable=False)
 
 class Combo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
 
 
 @app.route("/")
