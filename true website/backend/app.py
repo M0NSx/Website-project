@@ -17,6 +17,7 @@ class Combo(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     fruit = db.Column(db.String(50), nullable=False)
     fighting_style = db.Column(db.String(50), nullable=False)
+    sword = db.Column(db.String(50), nullable=False)
 
 
 @app.route("/")
