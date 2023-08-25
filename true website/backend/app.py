@@ -58,6 +58,14 @@ def create_combo():
     user_nickname = session.get('user_nickname')
     return render_template("create_combo.html", user_nickname=user_nickname)
 
+@app.route('/view_combo')
+def view_combo():
+    user = User.query.filter_by(nickname=session['user_nickname']).first()
+    combos = Combo.query.filter_by(user_id=user.id).all()
+
+    user_nickname = session.get('user_nickname')
+    return render_template("view_combo.html", user_nickname=user_nickname, combos=combos)
+
 @app.route('/create_acc', methods=["POST", "GET"])
 def create_acc():
     if request.method == "POST":
