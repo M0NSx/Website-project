@@ -21,3 +21,8 @@ body {
 .combo p {
     display: inline;
 }
+
+.combo img {
+    width: 10%;
+    margin-left: 0.8rem;
+}
