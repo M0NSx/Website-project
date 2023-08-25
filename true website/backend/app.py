@@ -15,6 +15,7 @@ class User(db.Model):
 class Combo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    fruit = db.Column(db.String(50), nullable=False)
 
 
 @app.route("/")
