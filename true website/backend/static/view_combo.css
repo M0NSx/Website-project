@@ -13,3 +13,4 @@ body {
 
 .content {
     width: 890px;
+    display: flex;
