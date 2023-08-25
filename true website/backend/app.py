@@ -21,8 +21,6 @@ class Combo(db.Model):
     gun = db.Column(db.String(50), nullable=False)
     combo_name = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text, nullable=False)
-    gun = request.form['gun']
-
 
 @app.route("/")
 def index():
@@ -44,6 +42,8 @@ def create_combo():
         fruit = request.form['fruit']
         fighting_style = request.form['fighting_style']
         sword = request.form['sword']
+        gun = request.form['gun']
+        combo_name = request.form['combo_name']
 
 
 @app.route('/create_acc', methods=["POST", "GET"])
