@@ -47,7 +47,8 @@ def create_combo():
         description = request.form['description']
 
         new_combo = Combo(user_id=user.id, fruit=fruit, fighting_style=fighting_style, sword=sword, gun=gun, combo_name=combo_name, description=description)
-
+        db.session.add(new_combo)
+        db.session.commit()
 
 @app.route('/create_acc', methods=["POST", "GET"])
 def create_acc():
