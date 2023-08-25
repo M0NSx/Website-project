@@ -12,6 +12,9 @@ class User(db.Model):
     nickname = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(100), nullable=False)
 
+class Combo(db.Model):
+
+
 @app.route("/")
 def index():
     return render_template("index.html")
