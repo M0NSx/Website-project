@@ -90,7 +90,7 @@
                         <option value="Rubber">Rubber</option>
                         <option value="Bomb">Bomb</option>
                 </select>
-                <img class="fightingStyleImage" src="../static/img/DragonNew.png" title="Blox Fruit">
+                <img class="fightingStyleImage" src="../static/img/Dragon.png" title="Blox Fruit">
 
             </div>
             <div class="content">
@@ -151,7 +151,7 @@
                             <option value="Dragon Trident">Dragon Trident</option>
                             <option value="Dual-Headed Blade">Dual-Headed Blade</option>
                 </select>
-                <img class="fightingStyleImage" src="../static/img/Dark_Blade.png" title="Sword">
+                <img class="fightingStyleImage" src="../static/img/Dark Blade.png" title="Sword">
             </div>
         
             <div class="content">
@@ -183,18 +183,7 @@
         </form>
     </main>
 
-    <div class="container">
-        {% with messages=get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category,message in messages %}
-                    <div class="alert alert-{{category}}">{{message}}</div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-        {% block body %}
-
-        {% endblock %}
-    </div>
+    
 
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/bootstrap/js/bootstrap.min.js"></script>
