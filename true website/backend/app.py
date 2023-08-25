@@ -52,6 +52,9 @@ def create_combo():
 
         flash("Combo created successfully!", "success")
 
+        user_nickname = session.get('user_nickname')
+
+
 
 @app.route('/create_acc', methods=["POST", "GET"])
 def create_acc():
