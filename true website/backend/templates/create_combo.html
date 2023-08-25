@@ -188,7 +188,8 @@
             {% if messages %}
                 {% for category,message in messages %}
                     <div class="alert alert-{{category}}">{{message}}
-
+                        <a href="{{url_for('create_combo')}}" class="close-success"> X </a>
+                    </div>
 
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/bootstrap/js/bootstrap.min.js"></script>
