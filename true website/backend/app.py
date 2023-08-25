@@ -55,7 +55,8 @@ def create_combo():
         user_nickname = session.get('user_nickname')
         return render_template("create_combo.html", user_nickname=user_nickname)
 
-
+    user_nickname = session.get('user_nickname')
+    return render_template("create_combo.html", user_nickname=user_nickname)
 
 @app.route('/create_acc', methods=["POST", "GET"])
 def create_acc():
