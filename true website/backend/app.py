@@ -20,6 +20,7 @@ class Combo(db.Model):
     sword = db.Column(db.String(50), nullable=False)
     gun = db.Column(db.String(50), nullable=False)
     combo_name = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.Text, nullable=False)
 
 
 @app.route("/")
