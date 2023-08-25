@@ -44,6 +44,7 @@ def create_combo():
         sword = request.form['sword']
         gun = request.form['gun']
         combo_name = request.form['combo_name']
+        description = request.form['description']
 
 
 @app.route('/create_acc', methods=["POST", "GET"])
