@@ -37,6 +37,7 @@ def dashboard():
     return render_template("dashboard.html", user_nickname=user_nickname)
 
 @app.route('/create_combo', methods=["POST", "GET"])
+def create_combo():
 
 
 @app.route('/create_acc', methods=["POST", "GET"])
