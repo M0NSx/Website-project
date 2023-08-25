@@ -42,6 +42,7 @@ def create_combo():
         user = User.query.filter_by(nickname=session['user_nickname']).first()
         fruit = request.form['fruit']
         fighting_style = request.form['fighting_style']
+        sword = request.form['sword']
 
 
 @app.route('/create_acc', methods=["POST", "GET"])
