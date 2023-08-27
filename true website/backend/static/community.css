@@ -1,1 +1,8 @@
+.content .btn-warning {
+    position: absolute;
+    right: 1rem;
+}
 
+.content {
+    margin-left: 5rem;
+}
