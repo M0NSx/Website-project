@@ -2,11 +2,12 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.secret_key = '414Çbbadhgjgruuq23213Ç'
+app.secret_key = 'vcx8vok1mk7csmvok2n3e4g43'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
 
+# Databases
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nickname = db.Column(db.String(50), unique=True, nullable=False)
@@ -22,13 +23,14 @@ class Combo(db.Model):
     combo_name = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text, nullable=False)
 
+# Routes pages
 @app.route("/")
 def index():
+    # Initialize combo count in the session
+    if 'combo_count' not in session:
+        session['combo_count'] = 0
+    
     return render_template("index.html")
-
-@app.route("/create_combo")
-def create_combo():
-    return render_template("create_combo.html")
 
 @app.route("/dashboard")
 def dashboard():
@@ -46,9 +48,17 @@ def create_combo():
         combo_name = request.form['combo_name']
         description = request.form['description']
 
+        # Check if user has reached the combo limit
+        if session['combo_count'] >= 14:
+            user_nickname = session.get('user_nickname')
+            return render_template("create_combo.html", user_nickname=user_nickname)
+
         new_combo = Combo(user_id=user.id, fruit=fruit, fighting_style=fighting_style, sword=sword, gun=gun, combo_name=combo_name, description=description)
         db.session.add(new_combo)
         db.session.commit()
+
+        # Increment the combo count for the user
+        session['combo_count'] += 1
 
         flash("Combo created successfully!", "success")
 
@@ -57,6 +67,7 @@ def create_combo():
 
     user_nickname = session.get('user_nickname')
     return render_template("create_combo.html", user_nickname=user_nickname)
+
 
 @app.route('/view_combo')
 def view_combo():
@@ -100,7 +111,7 @@ def register():
 
     return render_template('login.html')
 
-@app.route('/delete_combo/<int:id>', methods=["POST"])
+@app.route('/delete_combo/<int:id>', methods=['POST'])
 def delete_combo(id):
     combo_to_delete = Combo.query.get(id)
 
@@ -109,6 +120,8 @@ def delete_combo(id):
         db.session.commit()
     else:
         pass
+
+    session['combo_count'] -= 1
 
     return redirect(url_for('view_combo'))
 
@@ -142,6 +155,55 @@ def edit_combo(id):
     user_nickname = session.get('user_nickname')
     return render_template('edit_combo.html', user_nickname=user_nickname, combo=combo_to_edit)
 
+@app.route("/your_combo/<int:id>", methods=["GET"])
+def your_combo(id):
+    combo_to_edit = Combo.query.get(id)
+
+    if request.method == 'POST':
+        print(request.form)
+        # Retrieve edited combo data from form
+        new_fruit = request.form['fruit']
+        new_fighting_style = request.form['fighting_style']
+        new_sword = request.form['sword']
+        new_gun = request.form['gun']
+        new_combo_name = request.form['combo_name']
+        new_description = request.form['description']
+
+        # Update the combo's information in the database
+        combo_to_edit.fruit = new_fruit
+        combo_to_edit.fighting_style = new_fighting_style
+        combo_to_edit.sword = new_sword
+        combo_to_edit.gun = new_gun
+        combo_to_edit.combo_name = new_combo_name
+        combo_to_edit.description = new_description
+
+        db.session.commit()
+
+        # Redirect to the view_combo page after editing
+        return redirect(url_for('view_combo'))
+
+    user_nickname = session.get('user_nickname')
+    return render_template('your_combo.html', user_nickname=user_nickname, combo=combo_to_edit)
+
+@app.route('/community')
+def community():
+    if request.method == 'POST':
+        query = request.form.get('query')
+        combos = Combo.query.filter(Combo.combo_name.ilike(f'%{query}%')).all()
+    else:
+        combos = Combo.query.all()
+
+    user_nickname = session.get('user_nickname')
+    return render_template("community.html", user_nickname=user_nickname, combos=combos)
+
+@app.route('/search_combos', methods=['GET'])
+def search_combos():
+    query = request.args.get('query')
+    
+    combos = Combo.query.filter(Combo.combo_name.ilike(f'%{query}%')).all()
+    
+    user_nickname = session.get('user_nickname')
+    return render_template("community.html", user_nickname=user_nickname, combos=combos)
 
 if __name__ == '__main__':
     app.run(debug=True)
