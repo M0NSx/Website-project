@@ -137,6 +137,7 @@ def edit_combo(id):
         db.session.commit()
 
         # Redirect to the view_combo page after editing
+        return redirect(url_for('view_combo'))
 
 
 if __name__ == '__main__':
