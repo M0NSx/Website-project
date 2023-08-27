@@ -113,6 +113,7 @@ def delete_combo(id):
     return redirect(url_for('view_combo'))
 
 @app.route('/edit_combo/<int:id>', methods=['POST', 'GET'])
+def edit_combo(id):
 
 
 if __name__ == '__main__':
