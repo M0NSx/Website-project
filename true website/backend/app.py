@@ -139,6 +139,8 @@ def edit_combo(id):
         # Redirect to the view_combo page after editing
         return redirect(url_for('view_combo'))
 
+    user_nickname = session.get('user_nickname')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
