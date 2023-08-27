@@ -140,6 +140,7 @@ def edit_combo(id):
         return redirect(url_for('view_combo'))
 
     user_nickname = session.get('user_nickname')
+    return render_template('edit_combo.html', user_nickname=user_nickname, combo=combo_to_edit)
 
 
 if __name__ == '__main__':
