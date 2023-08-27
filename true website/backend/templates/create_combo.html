@@ -41,7 +41,7 @@
                   <a class="nav-link" href="{{url_for('view_combo')}}"><i class="bi bi-journals" aria-hidden="true"></i> View Combo</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-people" aria-hidden="true"></i> Community</a>
+                  <a class="nav-link" href="{{url_for('community')}}"><i class="bi bi-people" aria-hidden="true"></i> Community</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{url_for('index')}}"><i class="bi bi-card-text" aria-hidden="true"></i> Main Page</a>
@@ -54,7 +54,7 @@
         <form action="{{ url_for('create_combo') }}" method="POST">
             <div class="content">
                 <select class="filter" name="fruit">
-                        <option value="none">Select Fruit</option>
+                        <option value="Bomb">Select Fruit</option>
                         <option value="Leopard">Leopard</option>
                         <option value="Blizzard">Blizzard</option>
                         <option value="Dough">Dough</option>
@@ -95,7 +95,7 @@
             </div>
             <div class="content">
                 <select class="filter" name="fighting_style">
-                            <option value="b">Select Fighting Style</option>
+                            <option value="Combat">Select Fighting Style</option>
                             <option value="Godhuman">Godhuman</option>
                             <option value="Electric Claw">Electric Claw</option>
                             <option value="Dragon Talon">Dragon Talon</option>
@@ -113,7 +113,7 @@
 
             <div class="content">
                 <select class="filter" name="sword">
-                            <option value="none">Select Sword</option>
+                            <option value="Katana">Select Sword</option>
                             <option value="Triple Dark Blade">Triple Dark Blade</option>
                             <option value="Dark Blade">Dark Blade</option>
                             <option value="Cursed Dual Katana">Cursed Dual Katana</option>
@@ -156,7 +156,7 @@
         
             <div class="content">
                 <select class="filter" name="gun">
-                            <option value="1">Select Gun</option>
+                            <option value="Slingshot">Select Gun</option>
                             <option value="Soul Guitar">Soul Guitar</option>
                             <option value="Acidum Rifle">Acidum Rifle</option>
                             <option value="Kabucha">Kabucha</option>
@@ -175,9 +175,9 @@
             </div>
                 
             <div class="description-box">
-                <h2>About Your Combo</h2>
-                <input type="text" name="combo_name" placeholder="Name your combo...">
-                <textarea name="description" placeholder="Type your description..."></textarea>
+                <h2>Combo's Information</h2>
+                <input type="text" name="combo_name" placeholder="Name your combo..." maxlength="30" required>
+                <textarea name="description" placeholder="Type your description..." maxlength="500" required></textarea>
                 <button type="submit">Create Combo</button>
             </div>
         </form>
