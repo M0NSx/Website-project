@@ -195,6 +195,7 @@ def community_combo(id):
         new_fruit = request.form['fruit']
         new_fighting_style = request.form['fighting_style']
         new_sword = request.form['sword']
+        new_gun = request.form['gun']
 
 
 @app.route('/community')
