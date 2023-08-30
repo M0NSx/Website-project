@@ -199,6 +199,8 @@ def community_combo(id):
         new_combo_name = request.form['combo_name']
         new_description = request.form['description']
 
+        # Update the combo's information in the database
+
 
 @app.route('/community')
 def community():
