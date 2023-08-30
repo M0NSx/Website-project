@@ -204,6 +204,7 @@ def community_combo(id):
         combo_to_edit.fighting_style = new_fighting_style
         combo_to_edit.sword = new_sword
         combo_to_edit.gun = new_gun
+        combo_to_edit.combo_name = new_combo_name
 
 
 @app.route('/community')
