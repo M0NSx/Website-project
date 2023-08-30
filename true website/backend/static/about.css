@@ -1,1 +1,14 @@
+.about {
+    margin-left: 300px;
+    font-family: sans-serif;
+}
 
+#introduction {
+    font-weight: bold;
+}
+
+.combo-creation h2 {
+    margin-left: 2rem;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
