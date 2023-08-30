@@ -189,6 +189,8 @@ def your_combo(id):
 def community_combo(id):
     combo_to_edit = Combo.query.get(id)
 
+    if request.method == 'POST':
+
 
 @app.route('/community')
 def community():
