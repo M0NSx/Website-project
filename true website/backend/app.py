@@ -200,6 +200,7 @@ def community_combo(id):
         new_description = request.form['description']
 
         # Update the combo's information in the database
+        combo_to_edit.fruit = new_fruit
 
 
 @app.route('/community')
