@@ -6,3 +6,35 @@
 .content {
     margin-left: 5rem;
 }
+
+#main {
+    padding-bottom: 100px; /* Espaço para a altura do botão */
+}
+
+.content {
+    margin-left: 4rem;
+}
+
+.content .btn-warning {
+    position: absolute;
+    right: 1rem;
+}
+
+.load-more {
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    padding: 100px 3px;
+    border: 1px solid #334;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #021124;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.load-more:hover {
+    background-color: #334;
+}
