@@ -236,5 +236,17 @@ def search_combos():
     user_nickname = session.get('user_nickname')
     return render_template("community.html", user_nickname=user_nickname, combos=combos)
 
+@app.route('/load_more_combos')
+def load_more_combos():
+    page = int(request.args.get('page', 1))
+    combos_per_page = 10
+    
+    user = User.query.filter_by(nickname=session['user_nickname']).first()
+    
+    offset = (page - 1) * combos_per_page
+    combos = Combo.query.filter_by(user_id=user.id).offset(offset).limit(combos_per_page).all()
+
+    return render_template('combo_list.html', combos=combos)
+
 if __name__ == '__main__':
     app.run(debug=True)
