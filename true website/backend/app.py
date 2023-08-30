@@ -191,6 +191,7 @@ def community_combo(id):
 
     if request.method == 'POST':
         print(request.form)
+        # Retrieve edited combo data from form
 
 
 @app.route('/community')
