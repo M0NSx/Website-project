@@ -18,6 +18,41 @@ document.addEventListener('click', (e) => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const loadMoreButton = document.querySelector(".load-more");
+    const pageCountInput = document.querySelector("#page-count");
+
+    loadMoreButton.addEventListener("click", function() {
+        const currentPage = parseInt(pageCountInput.value);
+        const nextPage = currentPage + 1;
+
+        fetch(`/community?page=${nextPage}`, { method: "GET" })
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const newCombos = parser.parseFromString(html, "text/html").querySelectorAll(".content");
+
+                // Get the main container
+                const mainContainer = document.querySelector("#main");
+
+                // Loop through new combos and append them to the main container
+                newCombos.forEach(newCombo => {
+                    mainContainer.appendChild(newCombo);
+                });
+
+                pageCountInput.value = nextPage;
+
+                if (newCombos.length === 0) {
+                    loadMoreButton.style.display = "none";
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching combos:", error);
+            });
+    });
+});
+
+
 /* */
 const selectElements = document.querySelectorAll(".filter");
 const imageElements = document.querySelectorAll(".fightingStyleImage");
