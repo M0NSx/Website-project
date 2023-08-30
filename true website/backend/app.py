@@ -213,6 +213,7 @@ def community_combo(id):
         return redirect(url_for('community_view'))
 
     user_nickname = session.get('user_nickname')
+    return render_template('community_view.html', user_nickname=user_nickname, combo=combo_to_edit)
 
 
 @app.route('/community')
