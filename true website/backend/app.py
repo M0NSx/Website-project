@@ -186,6 +186,7 @@ def your_combo(id):
     return render_template('your_combo.html', user_nickname=user_nickname, combo=combo_to_edit)
 
 @app.route("/user_combo/<int:id>", methods=["GET"])
+def community_combo(id):
 
 
 @app.route('/community')
