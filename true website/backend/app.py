@@ -187,6 +187,7 @@ def your_combo(id):
 
 @app.route("/user_combo/<int:id>", methods=["GET"])
 def community_combo(id):
+    combo_to_edit = Combo.query.get(id)
 
 
 @app.route('/community')
