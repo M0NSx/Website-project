@@ -212,6 +212,8 @@ def community_combo(id):
         # Redirect to the community_combo page after editing
         return redirect(url_for('community_view'))
 
+    user_nickname = session.get('user_nickname')
+
 
 @app.route('/community')
 def community():
