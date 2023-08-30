@@ -209,7 +209,8 @@ def community_combo(id):
 
         db.session.commit()
 
-        # Redirect to the view_combo page after editing
+        # Redirect to the community_combo page after editing
+        return redirect(url_for('community_view'))
 
 
 @app.route('/community')
