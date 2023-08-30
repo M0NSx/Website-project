@@ -185,6 +185,9 @@ def your_combo(id):
     user_nickname = session.get('user_nickname')
     return render_template('your_combo.html', user_nickname=user_nickname, combo=combo_to_edit)
 
+@app.route("/user_combo/<int:id>", methods=["GET"])
+
+
 @app.route('/community')
 def community():
     if request.method == 'POST':
