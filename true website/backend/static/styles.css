@@ -164,3 +164,39 @@ nav a:hover {
     color: #252525;
     padding-top: 5px 10px;
 }
+
+.language ul li a::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+a.br::before {
+    background-image: url(../static/img/brazil.png);
+}
+
+a.en::before {
+    background-image: url(../static/img/us.png);
+}
+
+a.fr::before {
+    background-image: url(../static/img/france.png);
+}
+
+a.kr::before {
+    background-image: url(../static/img/korea.png);
+}
+
+.language:hover ul {
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
