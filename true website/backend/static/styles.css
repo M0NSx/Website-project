@@ -46,7 +46,8 @@ nav a{
 }
 
 nav a:hover {
-
+    color: rgb(135, 185, 241)
+}
 
 .content {
     text-align: center;
