@@ -200,3 +200,12 @@ a.kr::before {
     display: flex;
     align-items: center;
 }
+
+.language ul {
+    background-color: transparent;
+    border: none;
+}
+
+.language ul li a {
+    color: #fff;
+}
