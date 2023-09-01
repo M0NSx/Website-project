@@ -134,3 +134,5 @@ nav a:hover {
     display: flex;
     align-items: center;
 }
+
+.language-selected::before {
