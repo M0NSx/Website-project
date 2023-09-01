@@ -121,3 +121,6 @@ nav a:hover {
 .language-selected.change-kr::before {
     background-image: url(../static/img/korea.png);
 }
+
+/* Language */
+.language {
