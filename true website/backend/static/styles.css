@@ -107,3 +107,5 @@ nav a:hover {
 
 /* jQuery class */
 .language-selected.change-br::before {
+    background-image: url(../static/img/brazil.png);
+}
