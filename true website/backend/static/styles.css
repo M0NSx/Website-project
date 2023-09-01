@@ -109,3 +109,5 @@ nav a:hover {
 .language-selected.change-br::before {
     background-image: url(../static/img/brazil.png);
 }
+
+.language-selected.change-en::before {
