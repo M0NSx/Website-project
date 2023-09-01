@@ -145,3 +145,12 @@ nav a:hover {
     background-repeat: no-repeat;
     margin-right: 10px;
 }
+
+.language ul {
+    position: absolute;
+    width: 140px;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    padding-top: 10px;
+    display: none;
+}
