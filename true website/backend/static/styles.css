@@ -132,3 +132,5 @@ nav a:hover {
 
 .language-selected {
     display: flex;
+    align-items: center;
+}
