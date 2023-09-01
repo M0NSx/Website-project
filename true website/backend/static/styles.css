@@ -158,3 +158,9 @@ nav a:hover {
 .language ul li {
     list-style: none;
 }
+
+.language ul li a {
+    display: block;
+    color: #252525;
+    padding-top: 5px 10px;
+}
