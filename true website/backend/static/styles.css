@@ -117,3 +117,5 @@ nav a:hover {
 .language-selected.change-fr::before {
     background-image: url(../static/img/france.png);
 }
+
+.language-selected.change-kr::before {
