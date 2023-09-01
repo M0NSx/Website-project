@@ -104,3 +104,6 @@ nav a:hover {
 .hidden {
     display: none;
 }
+
+/* jQuery class */
+.language-selected.change-br::before {
