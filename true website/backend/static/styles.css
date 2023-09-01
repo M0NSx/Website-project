@@ -111,3 +111,5 @@ nav a:hover {
 }
 
 .language-selected.change-en::before {
+    background-image: url(../static/img/us.png);
+}
