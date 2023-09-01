@@ -137,3 +137,6 @@ nav a:hover {
 
 .language-selected::before {
     content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
