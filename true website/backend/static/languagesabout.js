@@ -11,3 +11,4 @@ $(".br").click(function () {
     $("#introduction").text('Aqui você pode criar combos para si mesmo e compartilhá-los com pessoas e também, com uma comunidade, você pode procurar por combos e ideias interessantes, então certifique-se de acompanhar os novos combos!');
     // Things to Toggle
     $(".language-selected").text("pt-BR");
+c    $(".language-selected").addClass("change-br");
