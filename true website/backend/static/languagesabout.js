@@ -7,3 +7,6 @@ $(".br").click(function () {
     $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> Comunidade');
     $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> Página Principal');
     $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Sair');
+    // About
+    $("#introduction").text('Aqui você pode criar combos para si mesmo e compartilhá-los com pessoas e também, com uma comunidade, você pode procurar por combos e ideias interessantes, então certifique-se de acompanhar os novos combos!');
+    // Things to Toggle
