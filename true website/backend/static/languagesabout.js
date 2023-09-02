@@ -30,3 +30,4 @@ $(".en").click(function () {
     // Things to Toggle
     $(".language-selected").text("en-US");
     $(".language-selected").removeClass("change-br change-fr change-kr");
+    $(".language-selected").addClass("change-en");
