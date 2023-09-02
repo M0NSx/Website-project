@@ -43,3 +43,26 @@ $(".fr").click(function () {
     $("#nav ul li:nth-child(3) a").html('<i class="bi bi-journals" aria-hidden="true"></i> Voir Combo');
     $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> Communauté');
     $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> Page Principale');
+    $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Sortir');
+    //About
+    $("#introduction").text('Ici tu peux créer des combo pour soi-même et partagez-le avec les gens e aussi, avec un communauté, tu peux trouver pour les combo et les idées intéressants, alors assurez-vous de accompagner les nouveaux combos!');
+    // Things to Toggle
+    $(".language-selected").text("FR");
+    $(".language-selected").removeClass("change-br change-en change-kr");
+    $(".language-selected").addClass("change-fr");
+    // Get Started
+    $(".get-started").text("Commencer");
+});
+
+// 한국어
+$(".kr").click(function () {
+    // Header
+    $("#nav ul li:nth-child(1) a").html('<i class="bi bi-book" aria-hidden="true"></i> 정보');
+    $("#nav ul li:nth-child(2) a").html('<i class="bi bi-plus-square" aria-hidden="true"></i> 콤보 만들기');
+    $("#nav ul li:nth-child(3) a").html('<i class="bi bi-journals" aria-hidden="true"></i> 콤보 보기');
+    $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> 커뮤니티');
+    $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> 메인 페이지');
+    $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> 로그 아웃');
+    //About
+    $("#introduction").text('여기서는 자신을 위한 콤보를 만들고 공유할 수 있으며, 또한 커뮤니티와 함께 새로운 콤보를 찾을 수도 있으니, 새로운 콤보를 확인해 보세요!');
+    // Things to Toggle
