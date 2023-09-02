@@ -29,3 +29,4 @@ $(".en").click(function () {
     $("#introduction").text('Here you can create combos for yourself and share it with peoples and also, with a community, you can look for interesting combos and ideas, therefore make sure to keep up with new combos!');
     // Things to Toggle
     $(".language-selected").text("en-US");
+    $(".language-selected").removeClass("change-br change-fr change-kr");
