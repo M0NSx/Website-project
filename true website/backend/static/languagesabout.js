@@ -67,3 +67,8 @@ $(".kr").click(function () {
     $("#introduction").text('여기서는 자신을 위한 콤보를 만들고 공유할 수 있으며, 또한 커뮤니티와 함께 새로운 콤보를 찾을 수도 있으니, 새로운 콤보를 확인해 보세요!');
     // Things to Toggle
     $(".language-selected").text("KR");
+    $(".language-selected").removeClass("change-br change-en change-fr");
+    $(".language-selected").addClass("change-kr");
+    // Get Started
+    $(".get-started").text("시작");
+});
