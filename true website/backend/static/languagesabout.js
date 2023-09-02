@@ -25,3 +25,6 @@ $(".en").click(function () {
     $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> Community');
     $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> Main Page');
     $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Log Out');
+    //About
+    $("#introduction").text('Here you can create combos for yourself and share it with peoples and also, with a community, you can look for interesting combos and ideas, therefore make sure to keep up with new combos!');
+    // Things to Toggle
