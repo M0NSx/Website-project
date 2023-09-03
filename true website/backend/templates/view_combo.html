@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../static/dashboard.css">
     <link rel="stylesheet" href="../static/create_combo.css">
     <link rel="stylesheet" href="../static/view_combo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     
@@ -53,7 +54,7 @@
 
     <main id="main">
         <!-- Existing content -->
-        <h2>Your Combos</h2>
+        <h2 id="title-combo">Your Combos</h2>
         {% for combo in combos %}
         <div class="content">
             <div class="combo-list">
@@ -78,8 +79,17 @@
         {% endfor %}
     </main>
 
-    <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../static/script.js"></script>
-</body>
-</html>
+    <ul>
+        <div class="language">
+          <div class="language-selected">
+            en-US
+          </div>
+          <ul>
+            <li><a href="#" class="br">Português</a></li>
+            <li><a href="#" class="en">English</a></li>
+            <li><a href="#" class="fr">Français</a></li>
+            <li><a href="#" class="kr">한국어</a></li>
+          </ul>
+        </div>
+        
+    </ul>
