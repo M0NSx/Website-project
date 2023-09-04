@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../static/create_combo.css">
     <link rel="stylesheet" href="../static/view_combo.css">
     <link rel="stylesheet" href="../static/community.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     
@@ -37,6 +38,9 @@
         <nav id="nav" class="navmenu">
             <ul class="nav flex-column">
                 <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{url_for('dashboard')}}"><i class="bi bi-book" aria-hidden="true"></i> About</a>
+                  </li>
+                <li class="nav-item">
                   <a class="nav-link" href="{{url_for('create_combo')}}"><i class="bi bi-plus-square" aria-hidden="true"></i> Create your Combo</a>
                 </li>
                 <li class="nav-item">
@@ -48,16 +52,19 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{url_for('index')}}"><i class="bi bi-card-text" aria-hidden="true"></i> Main Page</a>
                 </li>
+                <li class="nav-item" >
+                    <a id="logout" class="nav-link" href="{{url_for('register')}}"><i class="bi bi-door-open" aria-hidden="true"></i> Log out</a>
+                  </li>
               </ul>
         </nav>
     </aside>
 
     <main id="main">
         <!-- Existing content -->
-        <h2>Community Combos</h2>
+        <h2 id="title-community">Community Combos</h2>
         <section id="search-bar" >
             <form action="{{ url_for('search_combos') }}" method="get">
-                <input type="text" name="query" class="form-control mr-sm-2" placeholder="Search for combos" aria-label="Search">
+                <input id="search-combo" type="text" name="query" class="form-control mr-sm-2" placeholder="Search for combos" aria-label="Search">
                 <button type="submit" class="btn btn-outline-primary my-2 my-sm-0">Search</button>
             </form>
         </section>
@@ -69,7 +76,7 @@
                 <img src="../static/img/{{ combo.fighting_style }}.png" alt="{{ combo.fighting_style }}">
                 <img src="../static/img/{{ combo.sword }}.png" alt="{{ combo.sword }}">
                 <img src="../static/img/{{ combo.gun }}.png" alt="{{ combo.gun }}">
-                <form method="get" action="{{ url_for('your_combo', id=combo.id)}}" style="display: inline;">
+                <form method="get" action="{{ url_for('community_combo', id=combo.id)}}" style="display: inline;">
                     <button class="btn btn-warning" type="submit">View Combo</button>
                 </form>
             </div>
