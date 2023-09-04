@@ -161,7 +161,27 @@
             $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> Page Principale');
             $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Sortir');
         });
-            
+
+        // 한국어
+        $(".kr").click(function () {
+            //Title
+            $('#title-community').text("커뮤니티 콤보:")
+            // Search Bar
+            $('#search-combo').attr('placeholder', '콤보를 검색해 보세요');
+            // Things to Toggle
+            $(".language-selected").text("KR");
+            $(".language-selected").removeClass("change-br change-en change-fr");
+            $(".language-selected").addClass("change-kr");
+            // Nav Section
+            $("#nav ul li:nth-child(1) a").html('<i class="bi bi-book" aria-hidden="true"></i> 정보');
+            $("#nav ul li:nth-child(2) a").html('<i class="bi bi-plus-square" aria-hidden="true"></i> 콤보 만들기');
+            $("#nav ul li:nth-child(3) a").html('<i class="bi bi-journals" aria-hidden="true"></i> 콤보 보기');
+            $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> 커뮤니티');
+            $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> 메인 페이지');
+            $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> 로그 아웃');
+        });
+    </script>
+    
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/bootstrap/js/bootstrap.min.js"></script>
     <script src="../static/script.js"></script>
