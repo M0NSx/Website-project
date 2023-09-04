@@ -37,6 +37,9 @@
         <nav id="nav" class="navmenu">
             <ul class="nav flex-column">
                 <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{url_for('dashboard')}}"><i class="bi bi-book" aria-hidden="true"></i> About</a>
+                  </li>
+                <li class="nav-item">
                   <a class="nav-link" href="{{url_for('create_combo')}}"><i class="bi bi-plus-square" aria-hidden="true"></i> Create your Combo</a>
                 </li>
                 <li class="nav-item">
@@ -48,6 +51,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{url_for('index')}}"><i class="bi bi-card-text" aria-hidden="true"></i> Main Page</a>
                 </li>
+                <li class="nav-item" >
+                    <a id="logout" class="nav-link" href="{{url_for('register')}}"><i class="bi bi-door-open" aria-hidden="true"></i> Log out</a>
+                  </li>
               </ul>
         </nav>
     </aside>
@@ -94,7 +100,7 @@
         
     </ul>
 
-        <script>
+    <script>
         // Portuguese
         $(".br").click(function () {
             //Title
@@ -103,7 +109,13 @@
             $(".language-selected").text("pt-BR");
             $(".language-selected").removeClass("change-en change-fr change-kr");
             $(".language-selected").addClass("change-br");
-            
+            // Nav Section
+            $("#nav ul li:nth-child(1) a").html('<i class="bi bi-book" aria-hidden="true"></i> Sobre');
+            $("#nav ul li:nth-child(2) a").html('<i class="bi bi-plus-square" aria-hidden="true"></i> Criar Combo');
+            $("#nav ul li:nth-child(3) a").html('<i class="bi bi-journals" aria-hidden="true"></i> Ver Combo');
+            $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> Comunidade');
+            $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> Página Principal');
+            $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Sair');
         });
 
         // English
@@ -114,7 +126,13 @@
             $(".language-selected").text("en-US");
             $(".language-selected").removeClass("change-pt change-fr change-kr");
             $(".language-selected").addClass("change-en");
-            
+            // Nav Section
+            $("#nav ul li:nth-child(1) a").html('<i class="bi bi-book" aria-hidden="true"></i> About');
+            $("#nav ul li:nth-child(2) a").html('<i class="bi bi-plus-square" aria-hidden="true"></i> Create Combo');
+            $("#nav ul li:nth-child(3) a").html('<i class="bi bi-journals" aria-hidden="true"></i> View Combo');
+            $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> Community');
+            $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> Main Page');
+            $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Log Out');
         });
 
         // Français
@@ -125,7 +143,13 @@
             $(".language-selected").text("FR");
             $(".language-selected").removeClass("change-br change-en change-kr");
             $(".language-selected").addClass("change-fr");
-            
+            // Nav Section
+            $("#nav ul li:nth-child(1) a").html('<i class="bi bi-book" aria-hidden="true"></i> À Propos');
+            $("#nav ul li:nth-child(2) a").html('<i class="bi bi-plus-square" aria-hidden="true"></i> Créer Combo');
+            $("#nav ul li:nth-child(3) a").html('<i class="bi bi-journals" aria-hidden="true"></i> Voir Combo');
+            $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> Communauté');
+            $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> Page Principale');
+            $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Sortir');
         });
 
         // 한국어
@@ -136,7 +160,13 @@
             $(".language-selected").text("KR");
             $(".language-selected").removeClass("change-br change-en change-fr");
             $(".language-selected").addClass("change-kr");
-            
+            // Nav Section
+            $("#nav ul li:nth-child(1) a").html('<i class="bi bi-book" aria-hidden="true"></i> 정보');
+            $("#nav ul li:nth-child(2) a").html('<i class="bi bi-plus-square" aria-hidden="true"></i> 콤보 만들기');
+            $("#nav ul li:nth-child(3) a").html('<i class="bi bi-journals" aria-hidden="true"></i> 콤보 보기');
+            $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> 커뮤니티');
+            $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> 메인 페이지');
+            $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> 로그 아웃');
         });
     </script>
 
