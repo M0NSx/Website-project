@@ -142,7 +142,25 @@
             $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> Main Page');
             $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Log Out');
         });
-        
+
+        // Français
+        $(".fr").click(function () {
+            //Title
+            $('#title-community').text("Combo de la Communauté:")
+            // Search Bar
+            $('#search-combo').attr('placeholder', 'Trouver pour des combo');
+            // Things to Toggle
+            $(".language-selected").text("FR");
+            $(".language-selected").removeClass("change-br change-en change-kr");
+            $(".language-selected").addClass("change-fr");
+            // Nav Section
+            $("#nav ul li:nth-child(1) a").html('<i class="bi bi-book" aria-hidden="true"></i> À Propos');
+            $("#nav ul li:nth-child(2) a").html('<i class="bi bi-plus-square" aria-hidden="true"></i> Créer Combo');
+            $("#nav ul li:nth-child(3) a").html('<i class="bi bi-journals" aria-hidden="true"></i> Voir Combo');
+            $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> Communauté');
+            $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> Page Principale');
+            $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Sortir');
+        });
             
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/bootstrap/js/bootstrap.min.js"></script>
