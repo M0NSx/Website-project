@@ -1,1 +1,22 @@
+.description-box input[type="text"],
+.description-box textarea {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
 
+#main select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Language */
+.language {
+    top: 18px;
+    margin-left: 300px;
+}
