@@ -124,7 +124,24 @@
             $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Sair');
         });
 
-
+        // English
+        $(".en").click(function () {
+            //Title
+            $('#title-community').text("Community Combos:")
+            // Search Bar
+            $('#search-combo').attr('placeholder', 'Search for combos');
+            // Things to Toggle
+            $(".language-selected").text("en-US");
+            $(".language-selected").removeClass("change-pt change-fr change-kr");
+            $(".language-selected").addClass("change-en");
+            // Nav Section
+            $("#nav ul li:nth-child(1) a").html('<i class="bi bi-book" aria-hidden="true"></i> About');
+            $("#nav ul li:nth-child(2) a").html('<i class="bi bi-plus-square" aria-hidden="true"></i> Create Combo');
+            $("#nav ul li:nth-child(3) a").html('<i class="bi bi-journals" aria-hidden="true"></i> View Combo');
+            $("#nav ul li:nth-child(4) a").html('<i class="bi bi-people" aria-hidden="true"></i> Community');
+            $("#nav ul li:nth-child(5) a").html('<i class="bi bi-card-text" aria-hidden="true"></i> Main Page');
+            $("#logout").html('<i class="bi bi-door-open" aria-hidden="true"></i> Log Out');
+        });
         
             
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
