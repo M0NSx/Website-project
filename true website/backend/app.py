@@ -249,6 +249,7 @@ def load_more_combos():
     return render_template('combo_list.html', combos=combos)
 
 @app.route('/profile', methods=["POST", "GET"])
+def profile():
 
 
 if __name__ == '__main__':
