@@ -250,7 +250,7 @@ def load_more_combos():
 
 @app.route('/profile', methods=["POST", "GET"])
 def profile():
-
+    return render_template('profile.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
