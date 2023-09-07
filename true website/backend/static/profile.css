@@ -31,3 +31,7 @@ body {
     height: 180px;
     transition: 0.5s;
 }
+
+.profile-picture img:hover {
+    border-color: rgba(255, 255, 255, .5); /* Altere a cor da borda para branca durante o hover */
+}
