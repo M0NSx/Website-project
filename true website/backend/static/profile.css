@@ -40,3 +40,7 @@ body {
     position: relative;
     display: inline-block;
 }
+
+.edit-icon {
+    position: absolute;
+    bottom: 10px;
