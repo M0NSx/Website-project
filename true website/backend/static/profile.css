@@ -29,3 +29,5 @@ body {
     border-radius: 50%;
     width: 210px;
     height: 180px;
+    transition: 0.5s;
+}
