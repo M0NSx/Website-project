@@ -49,3 +49,54 @@ body {
     border: 2px solid #2c2f3f; /* Adicione uma borda à volta do ícone */
     border-radius: 50%;
     padding: 13px;
+    cursor: pointer;
+}
+
+.edit-icon i {
+    color: #fff;
+}
+
+/* Nickname Input */
+.edit-title {
+    color: #ddd8d8;
+    margin-top: 25px;
+    margin-left: 4rem;
+    margin-right: 0;
+    font-size: 17px;
+    width: 210px;
+}
+
+#nickname {
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: 4rem;
+    padding-left: 10px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 8px;
+    outline: none;
+    width: 210px;
+    height: 36px;
+    color: #fff;
+}
+
+#profile-description {
+    margin-left: 1rem;
+    top: 0;
+    width: 450px;
+    height: 180px;
+    background-color: transparent;
+    padding-left: 10px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 8px;
+    outline: none;
+    color: #fff;
+}
+
+.edit-description {
+    color: #ddd8d8;
+    margin-top: 25px;
+    margin-left: 1rem;
+    margin-right: 0;
+    font-size: 17px;
+    width: 210px;
+}
