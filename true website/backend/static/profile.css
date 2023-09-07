@@ -35,3 +35,8 @@ body {
 .profile-picture img:hover {
     border-color: rgba(255, 255, 255, .5); /* Altere a cor da borda para branca durante o hover */
 }
+
+.profile-picture {
+    position: relative;
+    display: inline-block;
+}
