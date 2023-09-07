@@ -46,3 +46,4 @@ body {
     bottom: 10px;
     right: 15px;
     background-color: #021124;
+    border: 2px solid #2c2f3f; /* Adicione uma borda à volta do ícone */
