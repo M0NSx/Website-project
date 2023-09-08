@@ -23,6 +23,7 @@ body {
 /* Profile Container */
 .profile-container {
     display: flex;
+    align-items: center;
 
 
     
