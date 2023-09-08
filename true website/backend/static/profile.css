@@ -24,8 +24,8 @@ body {
 .profile-container {
     display: flex;
     align-items: center;
-
-
+    margin-top: 2rem;
+}
     
 /* Profile Picture */
 .profile-picture img {
