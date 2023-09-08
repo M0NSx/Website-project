@@ -34,7 +34,7 @@ body {
     border-radius: 50%;
     width: 210px;
     height: 180px;
-    transition: 0.5s;
+    transition: 0.35s;
 }
 
 .profile-picture img:hover {
@@ -42,7 +42,7 @@ body {
 }
 
 .profile-picture {
-    position: relative;
+    margin-left: 4rem;
     display: inline-block;
 }
 
