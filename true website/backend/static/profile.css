@@ -83,6 +83,7 @@ body {
     border-radius: 8px;
     outline: none;
     color: #fff;
+    resize: none;
 
 
     
