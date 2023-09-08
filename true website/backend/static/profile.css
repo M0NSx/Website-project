@@ -22,7 +22,10 @@ body {
 
 /* Profile Container */
 .profile-container {
+    display: flex;
 
+
+    
 /* Profile Picture */
 .profile-picture img {
     margin-top: 2rem;
