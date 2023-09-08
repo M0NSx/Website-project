@@ -43,7 +43,7 @@ body {
 
 .profile-picture {
     margin-left: 4rem;
-    display: inline-block;
+    position: relative;
 }
 
 .edit-icon {
