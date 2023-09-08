@@ -79,6 +79,7 @@ body {
     height: 180px;
     background-color: transparent;
     padding-left: 10px;
+    border: 1px solid rgba(255, 255, 255, .5);
 
 
     
