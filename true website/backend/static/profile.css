@@ -140,3 +140,4 @@ body {
 /* Favorite Combo */
 .combo {
     margin-left: 1rem;
+    display: flex;
