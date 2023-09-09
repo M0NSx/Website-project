@@ -130,3 +130,5 @@ body {
 
 .btn-outline-secondary a {
     color: gray;
+    text-decoration: none;
+}
