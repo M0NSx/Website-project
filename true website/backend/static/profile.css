@@ -147,3 +147,9 @@ body {
 #img1 {
     margin-left: 40px;
 }
+
+.combo img {
+    border: 1px solid #fff;
+    width: 17%;
+    margin-right: 25px;
+}
