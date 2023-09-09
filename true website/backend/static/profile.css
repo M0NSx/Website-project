@@ -127,3 +127,5 @@ body {
 .buttons-profile {
     display: flex;
 }
+
+.btn-outline-secondary a {
