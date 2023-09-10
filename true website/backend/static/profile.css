@@ -205,3 +205,4 @@ body {
 }
 
 .combo {
+    display: flex;
